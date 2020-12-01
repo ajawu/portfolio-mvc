@@ -1,0 +1,84 @@
+/* ----------------------------------------------- */
+/* ----------------- GENERAL SETUP --------------- */
+/* ----------------------------------------------- */
+
+html, body{
+    scroll-behavior: smooth;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #7f7f7f;
+}
+
+/* ----------------------------------------------- */
+/* ---------------- HEADER SECTION --------------- */
+/* ----------------------------------------------- */
+
+/* ---------------- NAVBAR --------------- */
+header {
+    background-color: #F8F8F8;
+}
+
+.navbar {
+    padding: .5rem 0;
+}
+
+.main-logo {
+    height: 30px;
+}
+
+.nav-link {
+    font-size: 80%;
+    margin-right: 10px;
+    color: #636466 !important;
+}
+
+.work-button {
+    background: linear-gradient(180deg, #FF0000 0%, #5D216A 100%);
+    color: #fff !important;
+    display: inline-block;
+    padding: 9px 18px !important;
+    margin: 0 !important;
+}
+
+/* ---------------- HERO SECTION --------------- */
+#hero-section {
+    height: 70vh;
+}
+.hero-text-container {
+    margin: 150px 0 180px;
+}
+
+.title-hero {
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 0.4rem;
+}
+
+.main-hero {
+    font-size: 350%;
+    font-weight: 700;
+    background: linear-gradient(180deg, #FF0000 0%, #5D216A 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.end-hero {
+    text-transform: uppercase;
+    color: #FF0000;
+}
+
+.tools-row {
+    background-color: #F8F8F8;
+    padding: 25px 0;
+}
+
+.tool-image {
+    padding: 0 45px;
+    max-height: 53px;
+}
+
+.hero-image {
+    margin: 60px 0 30px;
+    display: block;
+}
