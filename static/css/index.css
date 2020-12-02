@@ -42,11 +42,8 @@ header {
 }
 
 /* ---------------- HERO SECTION --------------- */
-#hero-section {
-    height: 70vh;
-}
 .hero-text-container {
-    margin: 150px 0 180px;
+    margin: 150px 0 110px;
 }
 
 .title-hero {
@@ -79,6 +76,158 @@ header {
 }
 
 .hero-image {
-    margin: 60px 0 30px;
+    margin: 80px 0 30px;
     display: block;
+    height: 380px;
+    width: auto;
+}
+
+/* ----------------------------------------------- */
+/* ---------------- RESUME SECTION --------------- */
+/* ----------------------------------------------- */
+#resume-section {
+    margin: 100px 0 80px;
+}
+
+.section-title {
+    font-weight: 600;
+    color: #FF0000;
+    font-size: 100%;
+    text-transform: uppercase;
+}
+
+.job-details-box {
+    margin-top: 60px;
+}
+
+.job-info-list {
+    display: inline;
+    float: left;
+    padding: 0;
+}
+
+.job-info-list li {
+    display: inline-block;
+}
+
+.duration-text {
+    font-weight: 700;
+    font-size: 70%;
+    line-height: 15px;
+    color: #5D216A;
+}
+
+.job-info-text {
+    font-weight: 600;
+    font-size: 70%;
+    line-height: 15px;
+    letter-spacing: 1.5px;
+}
+
+.job-info-text::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #FF0000; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin: 0 25px;
+}
+
+.location-text {
+    color: #FF0000;
+}
+
+.position-text {
+    color: #000000;
+}
+
+.job-title-text {
+    color: #000;
+    font-size: 70%;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 1.5px;
+}
+
+.lighter-text {
+    font-weight: 600;
+    font-size: 100%;
+}
+
+.job-description-long {
+    color: #000;
+    font-weight: 300;
+    text-align: justify;
+    font-size: 70%;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+}
+
+.clearfix{ zoom: 1 }
+.clearfix:after {
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.purple-ghost-button:link,
+.purple-ghost-button:visited {
+    color: #5D216A;
+    border: 2px solid #8a319e;
+    font-size: 70%;
+    line-height: 18px;
+    font-weight: bold;
+    padding: 11px 13px;
+    letter-spacing: 0.3px;
+    transition: background-color 0.4s, color 0.4s, border 0.4s;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.purple-ghost-button:hover,
+.purple-ghost-button:active {
+    text-decoration: none;
+    color: #fff;
+    background-color: #5D216A;
+    border: 2px solid #5D216A;
+}
+
+.job-spacer {
+    margin: 385px 0;
+}
+
+.job-spacer-before {
+    margin: 310px 0;
+}
+
+.resume-divider {
+    background-image: url(img/divider.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-logo {
+    height: 48px;
+}
+
+.first-logo-spacer {
+    margin: 25px 0;
+}
+
+.second-logo-spacer {
+    margin: 102px 0;
+}
+
+.third-logo-spacer {
+    margin: 115px 0;
+}
+
+.resume-button-spacer {
+    margin: 120px 0;
 }
