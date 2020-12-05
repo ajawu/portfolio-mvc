@@ -124,11 +124,11 @@
             </div>
             <div class="col-sm-2 resume-divider">
                 <div class="first-logo-spacer"></div>
-                <img src="{% static 'images/crowdforce.svg' %}" alt="crowdforce-logo" class="company-logo">
+                <img src="{% static 'images/cube.jpeg' %}" alt="crowdforce-logo" class="cube-logo">
                 <div class="second-logo-spacer"></div>
                 <img src="{% static 'images/crowdforce.svg' %}" alt="crowdforce-logo" class="company-logo">
                 <div class="third-logo-spacer"></div>
-                <img src="{% static 'images/crowdforce.svg' %}" alt="crowdforce-logo" class="company-logo">
+                <img src="{% static 'images/cube.jpeg' %}" alt="crowdforce-logo" class="cube-logo">
                 <div class="resume-button-spacer"></div>
                 <div class="view-resume-container">
                     <a href="{% url 'portfolio:resume_download' %}" class="purple-ghost-button">
@@ -158,6 +158,98 @@
         </div>
     </div>
 </section>
+
+<section id="projects-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="section-title">My Projects 🤓</h3>
+                <p class="projects-subtitle">Few projects I have worked on as a Software Developer</p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-5">
+                <div class="project-container">
+                    <img src="{% static 'images/identito-shot.jpg' %}" alt="identito-project-shot" class="project-image">
+                    <div class="project-info-container">
+                        <div class="name-category-box">
+                            <p class="project-name">Identito</p>
+                            <p class="category-name">Identity Verification</p>
+                        </div>
+                        <div class="technologies-box">
+                            <ul class="technologies-list">
+                                <li class="yellow-full">Vanilla JS</li>
+                                <li class="purple-full">Bootstrap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-container">
+                    <a href="https://neue.ajawudavid.tech/" target="_blank">
+                        <img src="{% static 'images/neue-shot.jpg' %}" alt="neue-project-shot" class="project-image">
+                    </a>
+                    <div class="project-info-container">
+                        <div class="name-category-box">
+                            <p class="project-name">Neue Art Store</p>
+                            <p class="category-name">E-Commerce</p>
+                        </div>
+                        <div class="technologies-box">
+                            <ul class="technologies-list">
+                                <li class="docker-blue">Docker</li>
+                                <li class="green-full">Django</li>
+                                <li class="gray-full">+2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 project-divider">
+                <div class="project-button-spacer"></div>
+                <div class="view-resume-container">
+                    <a href="{% url 'portfolio:resume_download' %}" class="purple-ghost-button">
+                        More Projects
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="project-container">
+                    <img src="{% static 'images/ogani-shot.jpg' %}" alt="ogani-project-shot" class="project-image">
+                    <div class="project-info-container">
+                        <div class="name-category-box">
+                            <p class="project-name">Neue Art Store</p>
+                            <p class="category-name">E-Commerce</p>
+                        </div>
+                        <div class="technologies-box">
+                            <ul class="technologies-list">
+                                <li class="blue-full">Jquery</li>
+                                <li class="green-full">Django</li>
+                                <li class="gray-full">+2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-container">
+                    <img src="{% static 'images/buyblinds-shot.jpg' %}" alt="buyblinds-project-shot" class="project-image">
+                    <div class="project-info-container">
+                        <div class="name-category-box">
+                            <p class="project-name">BuyBlinds</p>
+                            <p class="category-name">E-Commerce</p>
+                        </div>
+                        <div class="technologies-box">
+                            <ul class="technologies-list">
+                                <li class="react-blue">React</li>
+                                <li class="green-full">DRF</li>
+                                <li class="gray-full">+3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- jQuery and JS bundle w/ Popper.js -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

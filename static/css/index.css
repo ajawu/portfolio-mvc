@@ -216,18 +216,136 @@ header {
     height: 48px;
 }
 
+.cube-logo {
+    height: 54px;
+}
+
 .first-logo-spacer {
     margin: 25px 0;
 }
 
 .second-logo-spacer {
-    margin: 102px 0;
+    margin: 98px 0;
 }
 
 .third-logo-spacer {
-    margin: 115px 0;
+    margin: 112px 0;
 }
 
 .resume-button-spacer {
     margin: 120px 0;
+}
+
+/* ----------------------------------------------- */
+/* ---------------- PROJECT SECTION --------------- */
+/* ----------------------------------------------- */
+
+.projects-subtitle {
+    font-weight: 400;
+    font-size: 70%;
+    color: #636466;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+}
+
+.project-image {
+    width: 477px;
+    max-width: 100%;
+    height: auto;
+}
+
+.project-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-button-spacer {
+    margin: 410px 0;
+}
+
+.project-container {
+    margin-bottom: 20px;
+}
+
+.name-category-box {
+    font-size: 70%;
+    line-height: 25px;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    width: 50%;
+}
+
+.technologies-box {
+    display: inline-block;
+    width: 50%;
+    float: right;
+}
+
+.project-name {
+    margin-top: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.category-name {
+    font-weight: 300;
+    color: #FF0000;
+}
+
+.technologies-list {
+    display: inline-block;
+    list-style: none;
+    float: right;
+    margin-top: 25px;
+}
+
+.technologies-list li {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 60%;
+    line-height: 25px;
+    letter-spacing: 1.5px;
+    padding: 0 8px;
+}
+
+.red-full {
+    background: rgba(255, 0, 0, 0.25);
+    color: #FF0000;
+}
+
+.purple-full {
+    background: rgba(93, 33, 106, 0.35);
+    color: #5D216A;
+}
+
+.gray-full {
+    background: rgba(196, 196, 196, 0.34);
+    color: #000;
+}
+
+.yellow-full {
+    background: rgba(240, 219, 79, 0.9);
+    color: #323330;
+}
+
+.blue-full {
+    background: rgba(105, 203, 247, 0.4);
+    color: #1956AF;
+}
+
+.green-full {
+    background: rgba(0, 202, 149, 0.7);
+    color: #005133;
+}
+
+.docker-blue {
+    background: rgba(74, 140, 244, 0.5);
+    color: #362FCF;
+}
+
+.react-blue {
+    background: rgba(58, 216, 233, 0.9);
+    color: #20222A;
 }
