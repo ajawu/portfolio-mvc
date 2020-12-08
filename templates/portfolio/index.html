@@ -260,17 +260,17 @@
                     <h4 class="comment-title">Let's Work ! <span class="larger-icon">💬</span></h4>
                     <p class="comment-subtitle">Let’s build your next project together, just leave a message.</p>
                     <p class="prominent-comment">
-                        <span class="larger">“</span> Most Prominent testimonial goes here, could be from a
-                        CEO or someone you have worked for/ with for a significant
-                        period <span class="larger">“</span>
+                        <span class="larger">“</span> David brings new insight and his passion for your business
+                        makes you think he owns it. I am glad to have worked with him.
+                        <span class="larger">“</span>
                     </p>
                     <div class="testifier-container">
                         <div class="avatar-container">
                             <img src="{% static 'images/customer-1.jpg' %}" alt="testifier-avatar" class="testifier-avatar">
                         </div>
                         <div class="testifier-details-container">
-                            <p class="testifier-name">Danielle Harrison</p>
-                            <p class="testifier-position">Business Developer, CrowdForce</p>
+                            <p class="testifier-name">Jude Chikezie</p>
+                            <p class="testifier-position">Founder, kayzie West Shoes</p>
                         </div>
                     </div>
                 </div>
@@ -284,9 +284,10 @@
                         <label for="email" class="form-label">Email</label>
                         <input type="email" name="email" id="email" class="form-input">
                         <label for="message" class="form-label">Message</label>
-                        <textarea name="message" id="message" cols="30" rows="1" class="form-input form-message">
-                        </textarea>
-                        <button type="submit" class="contact-submit-button">Send Message</button>
+                        <textarea name="message" id="message" cols="30" rows="3" class="form-input form-message"></textarea>
+                        <div class="submit-button-container">
+                            <button type="submit" class="contact-submit-button">Send Message</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -297,8 +298,40 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
+            <div class="col-sm">
+                <h4 class="footer-title">Get in touch</h4>
+                <p class="footer-contact">
+                    <img src="{% static 'images/email.svg' %}" alt="email-icon" class="email-image">
+                    ajawudavid@gmail.com
+                </p>
+                <p class="footer-contact">
+                    <img src="{% static 'images/phone.svg' %}" alt="email-icon">
+                    08156227194
+                </p>
+                <ul class="social-icons-list">
+                    <li>
+                        <a href="https://github.com/ajawu">
+                            <img src="{% static 'images/github.svg' %}" alt="github-icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/AjawuDavid">
+                            <img src="{% static 'images/linkedin.svg' %}" alt="linkedin-icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/ajawu-david-692407143/">
+                            <img src="{% static 'images/twitter.svg' %}" alt="twitter-icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm">
+                <div class="credit-container">
+                    <img src="{% static 'images/logo_alone.svg' %}" alt="site-logo" class="credit-image">
+                    <p class="credit-name">Ajawu David 2020</p>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
