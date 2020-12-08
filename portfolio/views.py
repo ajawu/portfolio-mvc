@@ -1,7 +1,9 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, FormView
 from django.views import View
-from django.http import HttpResponse,Http404
+from django.http import HttpResponse, Http404, JsonResponse
 from django.conf import settings
+from .forms import ContactForm
+from django.core.mail import send_mail
 import os
 
 
@@ -20,3 +22,25 @@ class ResumeView(View):
                 # file.close()
                 return response
         raise Http404
+
+
+class ContactView(FormView):
+    form_class = ContactForm
+
+    # Fix to use celery worker for better performance
+    def form_valid(self, form):
+        # Send Email function
+        send_response = send_mail('Portfolio Website Contact Form',
+                                  form.message,
+                                  'no-reply@mg.ajawudavid.tech',
+                                  ['ajawudavid@gmail.com'])
+        if send_response == 1:
+            return JsonResponse({'success': True,
+                                 'message': 'Thank you for reaching out. I will send you an email soon.'})
+        else:
+            return JsonResponse({'success': False,
+                                 'message': 'Email could not be sent. Is the email address specified valid.'})
+
+    def form_invalid(self, form):
+        return JsonResponse({'success': False,
+                             'errors': form.errors.as_json()})

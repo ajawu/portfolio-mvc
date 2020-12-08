@@ -237,8 +237,11 @@ header {
 }
 
 /* ----------------------------------------------- */
-/* ---------------- PROJECT SECTION --------------- */
+/* --------------- PROJECT SECTION --------------- */
 /* ----------------------------------------------- */
+#projects-section {
+    padding: 30px 0;
+}
 
 .projects-subtitle {
     font-weight: 400;
@@ -348,4 +351,155 @@ header {
 .react-blue {
     background: rgba(58, 216, 233, 0.9);
     color: #20222A;
+}
+
+/* ----------------------------------------------- */
+/* --------------- CONTACT SECTION --------------- */
+/* ----------------------------------------------- */
+#contact-section {
+    padding: 50px 0;
+}
+
+.comment-half {
+    background: #5D216A;
+    padding: 80px 0;
+    border: 1px solid #000;
+}
+
+.comment-title {
+    color: #fff;
+    font-size: 100%;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.comment-subtitle {
+    color: #fff;
+    font-size: 70%;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    margin-bottom: 40px;
+}
+
+.prominent-comment {
+    font-weight: 400;
+    font-size: 70%;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    text-align: justify;
+    color: #D6D6D6;
+}
+
+.larger {
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.larger-icon {
+    font-size: 130%;
+}
+
+.comment-container {
+    width: 60%;
+    margin: 0 20%;
+}
+
+.avatar-container {
+    display: inline-block;
+}
+
+.testifier-details-container {
+    display: inline-block;
+}
+
+.testifier-avatar {
+    height: 50px;
+    width: auto;
+    border-radius: 50px;
+    display: inline-block;
+    margin-right: 4px;
+    margin-top: -20px;
+}
+
+.testifier-name {
+    font-weight: 600;
+    font-size: 80%;
+    line-height: 17px;
+    letter-spacing: 0.3px;
+    color: #fff;
+    margin: 10px 0 0;
+}
+
+.testifier-position {
+    color: #C4C4C4;
+    font-weight: 300;
+    font-size: 70%;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+}
+
+.contact-form-title {
+    font-weight: 600;
+    font-size: 100%;
+    line-height: 35px;
+    letter-spacing: 1.5px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.form-container {
+    padding: 70px 10% 20px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 400;
+    font-size: 70%;
+    line-height: 17px;
+    letter-spacing: 1.5px;
+    color: #A8A8A8;
+    margin-bottom: 0;
+}
+
+.form-input {
+    display: block;
+    border: none;
+    border-bottom: 3px solid #DEDEDE;
+    width: 80%;
+    margin: 10px 0 20px;
+    font-size: 70%;
+    color: #000;
+    font-weight: 600;
+    padding: 0;
+    transition: border-bottom-color 0.3s;
+}
+
+.form-input:focus,
+.form-input:active {
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #FF8958;
+}
+
+.contact-submit-button {
+    background: linear-gradient(180deg, #FF0000 0%, #5D216A 100%);
+    color: #fff;
+    font-size: 70%;
+    letter-spacing: 0.3px;
+    line-height: 18px;
+    font-weight: 700;
+    border: none;
+    padding: 13px 20px;
+    display: block;
+    margin: 40px auto 0;
+}
+/* ----------------------------------------------- */
+/* ---------------- FOOTER SECTION --------------- */
+/* ----------------------------------------------- */
+footer {
+    background: rgba(229, 229, 229, 0.5);
 }
