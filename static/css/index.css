@@ -2,7 +2,7 @@
 /* ----------------- GENERAL SETUP --------------- */
 /* ----------------------------------------------- */
 
-html, body{
+html, body {
     scroll-behavior: smooth;
     font-family: 'Mulish', sans-serif;
     font-weight: 400;
@@ -39,11 +39,50 @@ header {
     display: inline-block;
     padding: 8px 17px !important;
     margin: 3px 0 0 !important;
+    min-width: 117px;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    /*background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 128, 0, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");*/
+    background-image: linear-gradient(180deg, #FF0000 0%, #5D216A 100%);
 }
 
 /* ---------------- HERO SECTION --------------- */
+.social-icons-hero {
+    list-style: none;
+    display: inline-block;
+}
+
+.social-icons-hero li {
+    text-align: center;
+    margin: 20px auto 0;
+}
+
+.social-icon {
+    height: 27px;
+}
+
+.middle-icon {
+    margin-left: -2px;
+    height: 34px;
+}
+
+.grey-horizontal:after {
+    display: block;
+    content: '';
+    height: 70px;
+    background-color: #C4C4C4;
+    width: 2px;
+    margin: 15px auto 0;
+}
+
+.social-hero-container {
+    position: absolute;
+    bottom: 0;
+}
+
 .hero-text-container {
-    margin: 150px 0 110px;
+    margin: 130px 0 0;
 }
 
 .title-hero {
@@ -53,16 +92,23 @@ header {
 }
 
 .main-hero {
-    font-size: 350%;
+    font-size: 420%;
     font-weight: 700;
-    background: linear-gradient(180deg, #FF0000 0%, #5D216A 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+    background: linear-gradient(180deg, rgba(255,0,0,1) 33%, rgba(93,33,106,1) 91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .end-hero {
     text-transform: uppercase;
     color: #FF0000;
+    width: 90%;
+    font-size: 90% !important;
+}
+
+.hero-image {
+    margin: 80px 0 0;
+    display: block;
 }
 
 .tools-row {
@@ -71,17 +117,34 @@ header {
 }
 
 .tool-image {
-    padding: 0 45px;
     max-height: 53px;
+    max-width: 120px;
 }
 
-.hero-image {
-    margin: 80px 0 30px;
-    display: block;
-    height: 380px;
-    width: auto;
+.tool-image-pad {
+    margin: 0 45px;
 }
 
+.owl-nav {
+    display: none;
+}
+
+.owl-dots {
+    display: none;
+}
+
+.owl-item {
+    height: 55px !important;
+}
+
+.single-logo {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100% !important;
+}
 /* ----------------------------------------------- */
 /* ---------------- RESUME SECTION --------------- */
 /* ----------------------------------------------- */
@@ -125,7 +188,7 @@ header {
 }
 
 .job-info-text::before {
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
     color: #FF0000; /* Change the color */
     font-weight: bold; /* If you want it to be bold */
     display: inline-block; /* Needed to add space between the bullet and the text */
@@ -164,13 +227,16 @@ header {
     text-transform: capitalize;
 }
 
-.clearfix{ zoom: 1 }
+.clearfix {
+    zoom: 1
+}
+
 .clearfix:after {
-	content: ".";
-	clear: both;
-	display: block;
-	height: 0;
-	visibility: hidden;
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
 }
 
 .purple-ghost-button:link,
@@ -185,6 +251,8 @@ header {
     transition: background-color 0.4s, color 0.4s, border 0.4s;
     display: inline-block;
     margin-left: 3px;
+    text-align: center;
+    min-width: 125px;
 }
 
 .purple-ghost-button:hover,
@@ -354,6 +422,14 @@ header {
 }
 
 /* ----------------------------------------------- */
+/* --------------- TESTIMONIALS SECTION --------------- */
+/* ----------------------------------------------- */
+.testimonial-box {
+
+}
+
+
+/* ----------------------------------------------- */
 /* --------------- CONTACT SECTION --------------- */
 /* ----------------------------------------------- */
 #contact-section {
@@ -502,6 +578,7 @@ header {
     display: block;
     margin: 0 auto;
 }
+
 /* ----------------------------------------------- */
 /* ---------------- FOOTER SECTION --------------- */
 /* ----------------------------------------------- */
@@ -570,4 +647,79 @@ footer {
     line-height: 20px;
     letter-spacing: 1.5px;
     color: #000000;
+}
+
+/* ----------------------------------------------- */
+/* ---------------- MEDIA QUERIES --------------- */
+/* ----------------------------------------------- */
+@media (max-width: 1319px) {
+    /*.hero-text-container {*/
+    /*    margin: 100px 0 110px;*/
+    /*}*/
+
+    .main-hero {
+        font-size: 370%;
+    }
+}
+
+@media (max-width: 1170px) {
+    .main-hero {
+        font-size: 320%;
+    }
+}
+
+@media (max-width: 1022px) {
+    .hero-text-container {
+        margin: 100px 0 0;
+        padding-left: 10px;
+    }
+
+    .main-hero {
+        font-size: 290%;
+    }
+}
+
+@media (max-width: 957px) {
+    .hero-text {
+        font-size: 260%;
+    }
+}
+
+@media (max-width: 938px) {
+    .grey-horizontal {
+        margin-bottom: 0.3rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .title-hero, .main-hero, .end-hero {
+        text-align: center;
+    }
+
+    .end-hero {
+        width: 52%;
+        margin: 0 auto;
+    }
+
+    .hero-text-container {
+        margin: 60px 0 30px;
+    }
+}
+
+@media (max-width: 741px) {
+    .end-hero {
+        width: 54%;
+    }
+}
+
+@media (max-width: 715px) {
+    .end-hero {
+        width: 55%;
+    }
+}
+
+@media (max-width: 605px) {
+    .end-hero {
+        width: 64%;
+    }
 }

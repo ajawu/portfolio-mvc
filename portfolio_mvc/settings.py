@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Local Apps
-    'portfolio.apps.PortfolioConfig'
+    'portfolio.apps.PortfolioConfig',
+    
+    # 3rd Party Apps
+    'compressor'
 ]
 
 MIDDLEWARE = [
@@ -125,27 +128,11 @@ if DEBUG:
         os.path.join(BASE_DIR, 'static/')
     ]
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    COMPRESS_ROOT = os.path.join(BASE_DIR, 'compress')
 
     # Email Config
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
-    AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
-
-    AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
-    AWS_S3_ENDPOINT_URL = os.getenv('AWS_S3_ENDPOINT_URL')
-    AWS_S3_CUSTOM_DOMAIN = os.getenv('AWS_S3_CUSTOM_DOMAIN')
-    AWS_S3_OBJECT_PARAMETERS = {
-        'CacheControl': 'max-age=86400',
-    }
-    AWS_LOCATION = os.getenv('AWS_LOCATION')
-    AWS_DEFAULT_ACL = os.getenv('AWS_DEFAULT_ACL')
-
-    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-    STATIC_URL = '{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
     # Email Config
     EMAIL_HOST = os.getenv('EMAIL_HOST')
     EMAIL_PORT = os.getenv('EMAIL_PORT')
@@ -153,3 +140,14 @@ else:
     EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
     EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS')
     DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
+
+
+# Django Compressor Settings
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
