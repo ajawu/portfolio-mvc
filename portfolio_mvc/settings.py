@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 import os
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(int(os.getenv('DEBUG')))
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [host for host in v.split(',')])
 
 # Application definition
 
@@ -40,9 +41,6 @@ INSTALLED_APPS = [
 
     # Local Apps
     'portfolio.apps.PortfolioConfig',
-    
-    # 3rd Party Apps
-    'compressor'
 ]
 
 MIDDLEWARE = [
@@ -120,6 +118,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
+DEFAULT_CONTACT_EMAIL = config('DEFAULT_CONTACT_EMAIL')
 
 # Static files (CSS, JavaScript, Images)
 if DEBUG:
@@ -128,26 +128,19 @@ if DEBUG:
         os.path.join(BASE_DIR, 'static/')
     ]
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-    COMPRESS_ROOT = os.path.join(BASE_DIR, 'compress')
 
     # Email Config
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
+    STATIC_ROOT = 'static'
     # Email Config
-    EMAIL_HOST = os.getenv('EMAIL_HOST')
-    EMAIL_PORT = os.getenv('EMAIL_PORT')
-    EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-    EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-    EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS')
-    DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
+    EMAIL_HOST = config('EMAIL_HOST')
+    EMAIL_PORT = config('EMAIL_PORT')
+    EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+    EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 
-
-# Django Compressor Settings
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder',
-)
-
-COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = True
+# Celery Configuration Options
+CELERY_TIMEZONE = "Africa/Lagos"
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60

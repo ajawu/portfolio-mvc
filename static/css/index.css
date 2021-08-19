@@ -19,18 +19,28 @@ header {
     background-color: #F8F8F8;
 }
 
-.navbar {
-    padding: 0.6rem 0;
-}
-
 .main-logo {
-    height: 30px;
+    height: 26px;
+    width: auto;
 }
 
-.nav-link {
-    font-size: 80%;
+.nav-link:link,
+.nav-link:visited {
+    font-size: 72%;
     margin-right: 10px;
-    color: #636466 !important;
+    color: #636466;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: #000;
+    /*border-bottom: 3px solid #636466;*/
+}
+
+.fw-700 {
+    font-weight: 700 !important;
 }
 
 .work-button {
@@ -38,8 +48,11 @@ header {
     color: #fff !important;
     display: inline-block;
     padding: 8px 17px !important;
-    margin: 3px 0 0 !important;
+    margin: 1px 0 0 !important;
     min-width: 117px;
+    font-size: 72%;
+    font-weight: 700 !important;
+    border-radius: 3px;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -89,10 +102,11 @@ header {
     text-transform: uppercase;
     color: #000;
     margin-bottom: 0.4rem;
+    font-size: 90%;
 }
 
 .main-hero {
-    font-size: 420%;
+    font-size: 365%;
     font-weight: 700;
     background: linear-gradient(180deg, rgba(255,0,0,1) 33%, rgba(93,33,106,1) 91%);
     -webkit-background-clip: text;
@@ -102,13 +116,15 @@ header {
 .end-hero {
     text-transform: uppercase;
     color: #FF0000;
-    width: 90%;
-    font-size: 90% !important;
+    width: 100%;
+    max-width: 460px;
+    font-size: 80%;
 }
 
 .hero-image {
     margin: 80px 0 0;
     display: block;
+    max-height: 390px;
 }
 
 .tools-row {
@@ -119,6 +135,11 @@ header {
 .tool-image {
     max-height: 53px;
     max-width: 120px;
+}
+
+.tool-image-small {
+    width: 70px;
+    height: 50px;
 }
 
 .tool-image-pad {
@@ -133,17 +154,13 @@ header {
     display: none;
 }
 
-.owl-item {
-    height: 55px !important;
-}
-
 .single-logo {
     display: flex;
     justify-content: center;
     justify-items: center;
     flex-direction: column;
     align-items: center;
-    height: 100% !important;
+    height: 55px !important;
 }
 /* ----------------------------------------------- */
 /* ---------------- RESUME SECTION --------------- */
@@ -155,7 +172,7 @@ header {
 .section-title {
     font-weight: 600;
     color: #FF0000;
-    font-size: 100%;
+    font-size: 90%;
     text-transform: uppercase;
 }
 
@@ -214,7 +231,7 @@ header {
 
 .lighter-text {
     font-weight: 600;
-    font-size: 100%;
+    font-size: 90%;
 }
 
 .job-description-long {
@@ -308,7 +325,7 @@ header {
 /* --------------- PROJECT SECTION --------------- */
 /* ----------------------------------------------- */
 #projects-section {
-    padding: 30px 0 50px;
+    padding: 30px 0 100px;
 }
 
 .projects-subtitle {
@@ -320,16 +337,10 @@ header {
 }
 
 .project-image {
-    width: 477px;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
-.project-divider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .project-button-spacer {
     margin: 410px 0;
@@ -422,65 +433,71 @@ header {
 }
 
 /* ----------------------------------------------- */
-/* --------------- TESTIMONIALS SECTION --------------- */
+/* ------------ TESTIMONIALS SECTION ------------- */
 /* ----------------------------------------------- */
 .testimonial-box {
+    background-color: #FAFAFA;
+    padding: 20px;
+    min-height: 200px;
+}
 
+.testimonial-text {
+    color: #000000;
 }
 
 
 /* ----------------------------------------------- */
 /* --------------- CONTACT SECTION --------------- */
 /* ----------------------------------------------- */
+
 #contact-section {
     padding: 50px 0 0;
 }
 
-.comment-half {
+.back-purple {
     background: #5D216A;
-    padding: 110px 0 40px;
-    border: 1px solid #000;
+}
+
+.main-comment-half {
+    padding: 45px 30px 30px 50px;
 }
 
 .comment-title {
     color: #fff;
-    font-size: 100%;
+    font-size: 92%;
     font-weight: 700;
-    line-height: 35px;
+    line-height: 20px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
 
 .comment-subtitle {
     color: #fff;
-    font-size: 70%;
+    font-size: 73%;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 25px;
     letter-spacing: 1.5px;
     margin-bottom: 40px;
 }
 
-.prominent-comment {
+.main-testimonial {
     font-weight: 400;
-    font-size: 70%;
+    font-size: 72%;
     letter-spacing: 1.5px;
-    line-height: 30px;
+    line-height: 21px;
     text-align: justify;
     color: #D6D6D6;
+    margin-bottom: 30px;
 }
 
-.larger {
-    font-weight: 800;
-    font-size: 30px;
+.main-testimonial:before {
+    content: "\201C";
+	font-size: 3em;
+	display: inline-block;
 }
 
 .larger-icon {
     font-size: 130%;
-}
-
-.comment-container {
-    width: 60%;
-    margin: 0 20% 0 30%;
 }
 
 .avatar-container {
@@ -519,16 +536,11 @@ header {
 
 .contact-form-title {
     font-weight: 600;
-    font-size: 100%;
+    font-size: 80%;
     line-height: 35px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     color: #000000;
     text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-.form-container {
-    padding: 50px 10% 0;
 }
 
 .form-label {
@@ -536,21 +548,25 @@ header {
     font-weight: 400;
     font-size: 70%;
     line-height: 17px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     color: #A8A8A8;
-    margin-bottom: 0;
+    margin: 10px 0 0;
+}
+
+.form-label:first-child {
+    margin-top: 25px;
 }
 
 .form-input {
     display: block;
     border: none;
-    border-bottom: 3px solid #DEDEDE;
-    width: 77%;
-    margin: 10px 0 20px;
-    font-size: 70%;
-    color: #000;
+    border-bottom: 2px solid #DEDEDE;
+    width: 95%;
+    margin: 0 0 20px;
+    font-size: 75%;
+    color: #444;
     font-weight: 600;
-    padding: 0;
+    padding: 10px 0 1px;
     transition: border-bottom-color 0.3s;
 }
 
@@ -558,12 +574,12 @@ header {
 .form-input:active {
     outline: none;
     border: none;
-    border-bottom: 3px solid #FF8958;
+    border-bottom: 2px solid #FF8958;
 }
 
 .submit-button-container {
-    margin: 40px 0 50px;
-    width: 77%;
+    margin: 40px 0 0;
+    width: 95%;
 }
 
 .contact-submit-button {
@@ -577,6 +593,7 @@ header {
     padding: 13px 20px;
     display: block;
     margin: 0 auto;
+    border-radius: 2px;
 }
 
 /* ----------------------------------------------- */
@@ -589,12 +606,12 @@ footer {
 
 .footer-title {
     font-weight: 400;
-    font-size: 100%;
+    font-size: 90%;
     line-height: 30px;
     letter-spacing: 1.5px;
     color: #FF0000;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .footer-contact {
@@ -602,7 +619,7 @@ footer {
     line-height: 20px;
     letter-spacing: 1.5px;
     color: #000;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .email-image {
@@ -624,16 +641,18 @@ footer {
 .social-icons-list li {
     display: inline-block;
     font-weight: 600;
-    font-size: 60%;
+    font-size: 50%;
     line-height: 10px;
     letter-spacing: 1.5px;
     padding: 0 16px 0 0;
 }
 
-.credit-container {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+.social-footer-icon {
+    height: 20px;
+}
+
+.social-footer-icon:nth-child(2) {
+    height: 32px !important;
 }
 
 .credit-image {
@@ -652,53 +671,51 @@ footer {
 /* ----------------------------------------------- */
 /* ---------------- MEDIA QUERIES --------------- */
 /* ----------------------------------------------- */
-@media (max-width: 1319px) {
-    /*.hero-text-container {*/
-    /*    margin: 100px 0 110px;*/
-    /*}*/
-
-    .main-hero {
-        font-size: 370%;
-    }
-}
-
-@media (max-width: 1170px) {
-    .main-hero {
-        font-size: 320%;
-    }
-}
-
-@media (max-width: 1022px) {
-    .hero-text-container {
-        margin: 100px 0 0;
-        padding-left: 10px;
-    }
-
-    .main-hero {
-        font-size: 290%;
-    }
-}
-
-@media (max-width: 957px) {
-    .hero-text {
-        font-size: 260%;
-    }
-}
-
-@media (max-width: 938px) {
-    .grey-horizontal {
-        margin-bottom: 0.3rem;
-    }
-}
-
-@media (max-width: 767px) {
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
     .title-hero, .main-hero, .end-hero {
         text-align: center;
     }
 
+     .main-hero {
+        font-size: 200%;
+    }
+
     .end-hero {
-        width: 52%;
-        margin: 0 auto;
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .title-hero {
+        font-size: 60%;
+    }
+
+    .title-hero {
+        margin-top: 60px;
+    }
+
+    .hero-text-container {
+        margin: 60px 0 30px;
+    }
+
+    #resume-section {
+        margin: 50px 0 80px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .title-hero, .main-hero, .end-hero {
+        text-align: center;
+    }
+
+    .title-hero {
+        margin-top: 60px;
+    }
+
+    .end-hero {
+        max-width: 100%;
+        margin-bottom: 50px;
     }
 
     .hero-text-container {
@@ -706,20 +723,72 @@ footer {
     }
 }
 
-@media (max-width: 741px) {
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .main-hero {
+        font-size: 230%;
+    }
+
     .end-hero {
-        width: 54%;
+        font-size: 55%;
+        max-width: 300px;
+    }
+
+    .title-hero {
+        font-size: 60%;
+    }
+
+    .social-icons-hero {
+        margin-bottom: 0;
+    }
+
+    .nav-padding {
+        padding: 0.4rem 0;
+    }
+
+    .grey-horizontal {
+        margin-bottom: 0.3rem;
     }
 }
 
-@media (max-width: 715px) {
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .main-hero {
+        font-size: 240%;
+    }
+
     .end-hero {
-        width: 55%;
+        font-size: 60%;
+    }
+
+    .title-hero {
+        font-size: 65%;
     }
 }
 
-@media (max-width: 605px) {
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .main-hero {
+        font-size: 295%;
+    }
     .end-hero {
-        width: 64%;
+        font-size: 70%;
+    }
+    .title-hero {
+        font-size: 75%;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+    .main-hero {
+        font-size: 340%;
+    }
+    .end-hero {
+        font-size: 75%;
+    }
+
+    .title-hero {
+        font-size: 80%;
     }
 }
