@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'portfolio_mvc.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config('DATABASE_NAME'),
+        'USER': config('DATABASE_USER'),
+        'PASSWORD': config('DATABASE_PASSWORD'),
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -120,20 +124,19 @@ USE_TZ = True
 
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 DEFAULT_CONTACT_EMAIL = config('DEFAULT_CONTACT_EMAIL')
-STATIC_URL = 'static'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Static files (CSS, JavaScript, Images)
 if DEBUG:
-    STATIC_URL = '/static/'
     STATICFILES_DIRS = [
         os.path.join(BASE_DIR, 'static/')
     ]
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
     # Email Config
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
-    STATIC_ROOT = 'static'
     # Email Config
     EMAIL_HOST = config('EMAIL_HOST')
     EMAIL_PORT = config('EMAIL_PORT')
