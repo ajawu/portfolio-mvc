@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/css/bootstrap-notify.min.css"
+          integrity="sha512-GFm9O0arU56sgj5HX9IrEtyDqKx3XhbwiTA75XTWW5JoyKnhzQ1Qj3yYbA+MLmy4p+dg5K77NCVxa3nalA96LQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
@@ -96,13 +99,14 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm d-flex justify-content-center flex-column">
+            <div class="col-sm d-flex justify-content-center flex-column hero-text-container">
                 <p class="title-hero">Hello 👋, I am </p>
                 <h3 class="main-hero">Ajawu David</h3>
                 <p class="end-hero">
                     A VIBRANT FULLSTACK DEVELOPER WITH A KEEN EYE FOR DETAIL
                 </p>
             </div>
+
             <div class="col-sm-5 col-lg-6 col-xl-6 d-none d-md-flex d-lg-flex d-xl-flex justify-content-center">
                 <img src="{% static 'images/david.webp' %}" alt="hero-image" class="hero-image img-fluid">
             </div>
@@ -186,6 +190,19 @@
             <div class="col">
                 <h3 class="d-none d-md-block d-lg-block d-xl-block section-title">Resume</h3>
                 <h3 class="d-sm-block d-md-none d-lg-none d-xl-none section-title text-center">Resume</h3>
+                <h3 class="text-center text-danger">Currently</h3>
+                <div class="d-flex">
+                    <div class="pl-0 pt-2 pr-5 pb-5">
+                        <p class="resume-long">
+                            I am currently an intern at <a href="https://hng.tech/" target="_blank">HNG</a>.
+                            Which is an ambitious attempt to change the way education is done in Africa.
+                            It’s the bridge between learning to code, and becoming the best in the world. <br>
+                        </p>
+                    </div>
+                    <div class="pt-2 px-5 pb-5">
+                        <img src="https://hng.tech/img/brand-logo.png" alt="hng-logo">
+                    </div>
+                </div>
             </div>
             <div class="col-sm-1 d-none d-md-block d-lg-block d-xl-block"></div>
         </div>
@@ -196,17 +213,18 @@
             <div class="col-sm-4">
                 <div class="job-details-box">
                     <ul class="job-info-list">
-                        <li class="duration-text">AUG 2019 - PRESENT</li>
-                        <li class="job-info-text location-text">Remote</li>
-                        <li class="job-info-text position-text">Freelance</li>
+                        <li class="duration-text">JAN 2021 - MAY 2021</li>
+                        <li class="job-info-text location-text">Abuja</li>
+                        <li class="job-info-text position-text">Full Time</li>
                     </ul>
                     <span class="clearfix"></span>
                     <p class="job-title-text">
-                        SOFTWARE DEVELOPMENT- <span class="lighter-text">Freelance</span>
+                        SOFTWARE DEVELOPER - <span class="lighter-text">Stackfill</span>
                     </p>
                     <p class="job-description-long">
-                        Developed over 5 Software solutions and websites for clients all over the world,
-                        including buyblinds.ng, identito.com, neue, ogani...
+                        I reduced the time required for product sourcing by up to 40% by building a website
+                        that supported purchasing goods from stackfill supported Asian e-commerce websites and
+                        payment with Nigerian debit or credit card.
                     </p>
                 </div>
 
@@ -214,26 +232,28 @@
 
                 <div class="job-details-box">
                     <ul class="job-info-list">
-                        <li class="duration-text">SEPT 2017 - DEC 2018</li>
-                        <li class="job-info-text location-text">Remote</li>
-                        <li class="job-info-text position-text">Freelance</li>
+                        <li class="duration-text">JAN 2019 - AUG 2019</li>
+                        <li class="job-info-text location-text">Abuja</li>
+                        <li class="job-info-text position-text">Internship</li>
                     </ul>
                     <span class="clearfix"></span>
                     <p class="job-title-text">
-                        SOFTWARE DEVELOPMENT - <span class="lighter-text">Freelance</span>
+                        INTERN - <span class="lighter-text">CrowdForce</span>
                     </p>
                     <p class="job-description-long">
-                        Developed multiple products with python (django), javaScript, jQuery etc for multiple clients.
+                        I improved the speed of data analysis by up to 70% and helped reduce errors during the
+                        data validation process by building a data export service to generate a report of
+                        collected data in excel format.
                     </p>
                 </div>
             </div>
             <div class="col-sm-2 resume-divider">
                 <div class="first-logo-spacer"></div>
-                <img src="{% static 'images/cube.jpeg' %}" alt="crowdforce-logo" class="cube-logo">
+                <img src="{% static 'images/stackfill_logo.png' %}" alt="stackfill-logo" class="company-logo">
                 <div class="second-logo-spacer"></div>
-                <img src="{% static 'images/crowdforce.svg' %}" alt="crowdforce-logo" class="company-logo">
+                <img src="{% static 'images/cube.jpeg' %}" alt="place-logo" class="cube-logo">
                 <div class="third-logo-spacer"></div>
-                <img src="{% static 'images/cube.jpeg' %}" alt="crowdforce-logo" class="cube-logo">
+                <img src="{% static 'images/crowdforce.svg' %}" alt="crowdforce-logo" class="company-logo">
                 <div class="resume-button-spacer"></div>
                 <div class="view-resume-container">
                     <a href="{% url 'portfolio:resume_download' %}" class="purple-ghost-button">
@@ -245,18 +265,18 @@
                 <div class="job-spacer-before"></div>
                 <div class="job-details-box">
                     <ul class="job-info-list">
-                        <li class="duration-text">JAN 2019- AUG 2019</li>
+                        <li class="duration-text">JAN 2020 - DEC 2020</li>
                         <li class="job-info-text location-text">Abuja</li>
-                        <li class="job-info-text position-text">Internship</li>
+                        <li class="job-info-text position-text">Part Time</li>
                     </ul>
                     <span class="clearfix"></span>
                     <p class="job-title-text">
-                        SOFTWARE DEVELOPMENT- <span class="lighter-text">CrowdForce</span>
+                        SOFTWARE DEVELOPMENT- <span class="lighter-text">KiakiaPower</span>
                     </p>
                     <p class="job-description-long">
-                        Developed Software solutions and Amazing experiences for customers.
-                        Took part in the development of CrowdForce’s groundbreaking projects (TraderMoni) and
-                        was able to increase product shipping rates.
+                        I built the key product (a website to purchase tokens for electric prepaid meters in Nigeria)
+                        using Django, HTML, CSS, Vanilla Javascript, Redis, PostgreSQL and deployed it
+                        on Digital Ocean and google app engine.
                     </p>
                 </div>
             </div>
@@ -265,76 +285,67 @@
 
         {# Resume Small screen #}
         <div class="row mt-3 d-sm-flex d-md-none d-lg-none d-xl-none">
-            <div class="col-sm-1 d-none d-md-block d-lg-block d-xl-block"></div>
-            <div class="col-sm-4">
-                <div class="job-details-box">
-                    <ul class="job-info-list">
-                        <li class="duration-text">JAN 2021 - MAY 2021</li>
-                        <li class="job-info-text location-text">Abuja</li>
-                        <li class="job-info-text position-text">Full Time</li>
+            <div class="col-sm">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                    <img src="{% static 'images/stackfill_logo.png' %}" alt="stackfill-logo"
+                         class="company-logo my-2">
+                    <ul class="job-info-list mb-2">
+                        <li class="duration-text-small">JAN 2021 - MAY 2021</li>
+                        <li class="job-info-text-small location-text">Abuja</li>
+                        <li class="job-info-text-small position-text">Full Time</li>
                     </ul>
                     <span class="clearfix"></span>
-                    <p class="job-title-text">
-                        SOFTWARE DEVELOPMENT <br>
-                        <span class="lighter-text">Stackfill</span>
+                    <p class="job-title-text text-center mb-2" style="font-size: 60%">
+                        SOFTWARE DEVELOPER
                     </p>
-                    <p class="job-description-long">
-                        Developed over 5 Software solutions and websites for clients all over the world,
-                        including buyblinds.ng, identito.com, neue, ogani...
+                    <span class="job-title-text lighter-text-small text-center mb-2">Stackfill</span>
+                    <p class="job-description-long job-description-long-small">
+                        I reduced the time required for product sourcing by up to 40% by building a website
+                        that supported purchasing goods from stackfill supported Asian e-commerce websites and
+                        payment with Nigerian debit or credit card.
                     </p>
                 </div>
 
-                <div class="job-spacer"></div>
+                <div class="d-flex justify-content-center align-items-center flex-column my-3">
+                    <img src="{% static 'images/cube.jpeg' %}" alt="cube-logo"
+                         class="cube-logo my-2">
+                    <ul class="job-info-list mb-2">
+                        <li class="duration-text-small">JAN 2020 - DEC 2020</li>
+                        <li class="job-info-text-small location-text">Abuja</li>
+                        <li class="job-info-text-small position-text">Part Time</li>
+                    </ul>
+                    <span class="clearfix"></span>
+                    <p class="job-title-text text-center mb-2" style="font-size: 60%">
+                        SOFTWARE DEVELOPER
+                    </p>
+                    <span class="job-title-text lighter-text-small text-center mb-2">KiakiaPower</span>
+                    <p class="job-description-long job-description-long-small">
+                        I built the key product (a website to purchase tokens for electric prepaid meters in Nigeria)
+                        using Django, HTML, CSS, Vanilla Javascript, Redis, PostgreSQL and deployed it
+                        on Digital Ocean and google app engine.
+                    </p>
+                </div>
 
-                <div class="job-details-box">
-                    <ul class="job-info-list">
-                        <li class="duration-text">SEPT 2017 - DEC 2018</li>
-                        <li class="job-info-text location-text">Remote</li>
-                        <li class="job-info-text position-text">Freelance</li>
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                    <img src="{% static 'images/crowdforce.svg' %}" alt="crowdforce-logo"
+                         class="company-logo my-2">
+                    <ul class="job-info-list mb-2">
+                        <li class="duration-text-small">JAN 2019 - AUG 2019</li>
+                        <li class="job-info-text-small location-text">Abuja</li>
+                        <li class="job-info-text-small position-text">Internship</li>
                     </ul>
                     <span class="clearfix"></span>
-                    <p class="job-title-text">
-                        SOFTWARE DEVELOPMENT - <span class="lighter-text">Freelance</span>
+                    <p class="job-title-text text-center mb-2" style="font-size: 60%">
+                        INTERN
                     </p>
-                    <p class="job-description-long">
-                        Developed multiple products with python (django), javaScript, jQuery etc for multiple clients.
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-2 resume-divider">
-                <div class="first-logo-spacer"></div>
-                <img src="{% static 'images/cube.jpeg' %}" alt="crowdforce-logo" class="cube-logo">
-                <div class="second-logo-spacer"></div>
-                <img src="{% static 'images/crowdforce.svg' %}" alt="crowdforce-logo" class="company-logo">
-                <div class="third-logo-spacer"></div>
-                <img src="{% static 'images/cube.jpeg' %}" alt="crowdforce-logo" class="cube-logo">
-                <div class="resume-button-spacer"></div>
-                <div class="view-resume-container">
-                    <a href="{% url 'portfolio:resume_download' %}" class="purple-ghost-button">
-                        View My Resume
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="job-spacer-before"></div>
-                <div class="job-details-box">
-                    <ul class="job-info-list">
-                        <li class="duration-text">JAN 2019- AUG 2019</li>
-                        <li class="job-info-text location-text">Abuja</li>
-                        <li class="job-info-text position-text">Internship</li>
-                    </ul>
-                    <span class="clearfix"></span>
-                    <p class="job-title-text">
-                        SOFTWARE DEVELOPMENT- <span class="lighter-text">CrowdForce</span>
-                    </p>
-                    <p class="job-description-long">
-                        Developed Software solutions and Amazing experiences for customers.
-                        Took part in the development of CrowdForce’s groundbreaking projects (TraderMoni) and
-                        was able to increase product shipping rates.
+                    <span class="job-title-text lighter-text-small text-center mb-2">CrowdForce</span>
+                    <p class="job-description-long job-description-long-small">
+                        I improved the speed of data analysis by up to 70% and helped reduce errors during the
+                        data validation process by building a data export service to generate a report of
+                        collected data in excel format.
                     </p>
                 </div>
             </div>
-            <div class="col-sm-1 d-none d-md-block d-lg-block d-xl-block"></div>
         </div>
     </div>
 </section>
@@ -447,49 +458,49 @@
     </div>
 </section>
 
-<section id="testimonials-section">
-    <div class="container-fluid">
-        <div class="brand-carousel owl-carousel">
-            <div>
-                <p style="width: 400px; height: 400px;">
-                    Hello World boykis
-                </p>
-            </div>
-            <div class="single-logo">
-                <img src="{% static 'images/python.svg' %}" alt="python-logo"
-                     class="tool-image" style="width: 100px; height: 30px;">
-            </div>
-            <div class="single-logo">
-                <img src="{% static 'images/django_rest.svg' %}" alt="django_rest-logo"
-                     class="tool-image" style="width: 120px; height: 53px;">
-            </div>
-            <div class="single-logo">
-                <img src="{% static 'images/jquery.svg' %}" alt="jquery-logo"
-                     class="tool-image" style="width: 100px; height: 25px;">
-            </div>
-            <div class="single-logo">
-                <img src="{% static 'images/redis.svg' %}" alt="redis-logo"
-                     class="tool-image" style="width: 44px; height: 44px;">
-            </div>
-            <div class="single-logo">
-                <img src="{% static 'images/mysql.svg' %}" alt="mysql-logo"
-                     class="tool-image" style="width: 75px; height: 40px;">
-            </div>
-            <div class="single-logo">
-                <img src="{% static 'images/postgres.svg' %}" alt="postgres-logo"
-                     class="tool-image" style="width: 53px; height: 53px;">
-            </div>
-            <div class="single-logo">
-                <img src="{% static 'images/linux.svg' %}" alt="linux-logo"
-                     class="tool-image" style="width: 42px; height: 49px;">
-            </div>
-            <div class="single-logo">
-                <img src="{% static 'images/react.svg' %}" alt="react-logo"
-                     class="tool-image" style="width: 36px; height: 53px;">
-            </div>
-        </div>
-    </div>
-</section>
+{#<section id="testimonials-section">#}
+{#    <div class="container-fluid">#}
+{#        <div class="brand-carousel owl-carousel">#}
+{#            <div>#}
+{#                <p style="width: 400px; height: 400px;">#}
+{#                    Hello World boykis#}
+{#                </p>#}
+{#            </div>#}
+{#            <div class="single-logo">#}
+{#                <img src="{% static 'images/python.svg' %}" alt="python-logo"#}
+{#                     class="tool-image" style="width: 100px; height: 30px;">#}
+{#            </div>#}
+{#            <div class="single-logo">#}
+{#                <img src="{% static 'images/django_rest.svg' %}" alt="django_rest-logo"#}
+{#                     class="tool-image" style="width: 120px; height: 53px;">#}
+{#            </div>#}
+{#            <div class="single-logo">#}
+{#                <img src="{% static 'images/jquery.svg' %}" alt="jquery-logo"#}
+{#                     class="tool-image" style="width: 100px; height: 25px;">#}
+{#            </div>#}
+{#            <div class="single-logo">#}
+{#                <img src="{% static 'images/redis.svg' %}" alt="redis-logo"#}
+{#                     class="tool-image" style="width: 44px; height: 44px;">#}
+{#            </div>#}
+{#            <div class="single-logo">#}
+{#                <img src="{% static 'images/mysql.svg' %}" alt="mysql-logo"#}
+{#                     class="tool-image" style="width: 75px; height: 40px;">#}
+{#            </div>#}
+{#            <div class="single-logo">#}
+{#                <img src="{% static 'images/postgres.svg' %}" alt="postgres-logo"#}
+{#                     class="tool-image" style="width: 53px; height: 53px;">#}
+{#            </div>#}
+{#            <div class="single-logo">#}
+{#                <img src="{% static 'images/linux.svg' %}" alt="linux-logo"#}
+{#                     class="tool-image" style="width: 42px; height: 49px;">#}
+{#            </div>#}
+{#            <div class="single-logo">#}
+{#                <img src="{% static 'images/react.svg' %}" alt="react-logo"#}
+{#                     class="tool-image" style="width: 36px; height: 53px;">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
 
 <section id="contact-section">
     <div class="container-fluid">
@@ -566,15 +577,13 @@
                     <h4 class="contact-form-title text-center">Leave a message</h4>
                     <form action="{% url 'portfolio:contact_me' %}" method="post">
                         {% csrf_token %}
-                        <div>
-                            <label for="name" class="form-label">Name</label>
-                        </div>
-                        <input type="text" name="name" id="name" class="form-input">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" name="name" id="name" class="form-input" required>
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" name="email" id="email" class="form-input">
+                        <input type="email" name="email" id="email" class="form-input" required>
                         <label for="message" class="form-label">Message</label>
                         <textarea name="message" id="message" cols="30" rows="2"
-                                  class="form-input form-message"></textarea>
+                                  class="form-input form-message" required></textarea>
                         <div class="submit-button-container">
                             <button type="submit" class="contact-submit-button">Send Message</button>
                         </div>
@@ -670,10 +679,31 @@
         </div>
     </div>
 </footer>
+
+{% if messages %}
+    <div style="position: fixed; top: 80px; right: 30px; width: 270px">
+        {% for message in messages %}
+            <div class="toast {{ message.tags }}-toast" style="position: fixed; top: 80px; right: 30px; width: 270px" data-delay="50000">
+                <div class="d-flex flex-row justify-content-between">
+                    <p class="mb-0" style="line-height: 22px; font-size: 15px;">{{ message }}</p>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+      $('.toast').toast('show');
+    });
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
     $('.brand-carousel').owlCarousel({
@@ -698,7 +728,6 @@
             }
         }
     })
-
 </script>
 </body>
 </html>

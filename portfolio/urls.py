@@ -6,5 +6,4 @@ urlpatterns = [
     path('', views.LandingView.as_view(), name='landing_page'),
     path('resume/', views.ResumeView.as_view(), name='resume_download'),
     path('contact/', views.ContactView.as_view(), name='contact_me'),
-    path('project/<slug:project_slug>', views.ProjectView.as_view(), name='project_detail'),
 ]

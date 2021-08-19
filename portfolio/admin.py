@@ -10,5 +10,5 @@ class ProjectAdmin(admin.ModelAdmin):
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email_address')
-    readonly_fields = ('name', 'email_address', 'message')
+    list_display = ('name', 'email')
+    readonly_fields = ('name', 'email', 'message')

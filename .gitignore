@@ -2,3 +2,4 @@
 settings.env
 db.sqlite3
 *.pyc
+.env

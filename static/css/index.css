@@ -94,10 +94,6 @@ header {
     bottom: 0;
 }
 
-.hero-text-container {
-    margin: 130px 0 0;
-}
-
 .title-hero {
     text-transform: uppercase;
     color: #000;
@@ -213,6 +209,29 @@ header {
     margin: 0 25px;
 }
 
+.duration-text-small {
+    font-weight: 700;
+    font-size: 57%;
+    line-height: 15px;
+    color: #5D216A;
+}
+
+.job-info-text-small {
+    font-weight: 600;
+    font-size: 57%;
+    line-height: 15px;
+    letter-spacing: 1.5px;
+}
+
+.job-info-text-small::before {
+    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #FF0000; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin: 0;
+}
+
 .location-text {
     color: #FF0000;
 }
@@ -234,6 +253,12 @@ header {
     font-size: 90%;
 }
 
+.lighter-text-small {
+    font-weight: 600;
+    font-size: 60%;
+}
+
+
 .job-description-long {
     color: #000;
     font-weight: 300;
@@ -242,6 +267,10 @@ header {
     line-height: 20px;
     letter-spacing: 1.5px;
     text-transform: capitalize;
+}
+
+.job-description-long-small {
+    font-size: 60% !important;
 }
 
 .clearfix {
@@ -668,11 +697,45 @@ footer {
     color: #000000;
 }
 
+.toast {
+    opacity: 0.9;
+    font-size: 72%;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+
+.error-toast {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.success-toast {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.close {
+    font-size: 140%;
+    color: #fff;
+}
+
+.resume-long {
+    color: #000;
+    font-weight: 500;
+    font-size: 90%;
+    max-width: 600px;
+}
+
 /* ----------------------------------------------- */
 /* ---------------- MEDIA QUERIES --------------- */
 /* ----------------------------------------------- */
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+    .hero-text-container {
+        display: flex;
+        justify-content: center;
+    }
     .title-hero, .main-hero, .end-hero {
         text-align: center;
     }
@@ -684,18 +747,12 @@ footer {
     .end-hero {
         max-width: 100%;
         margin-bottom: 50px;
-    }
-
-    .title-hero {
-        font-size: 60%;
+        font-size: 52%;
     }
 
     .title-hero {
         margin-top: 60px;
-    }
-
-    .hero-text-container {
-        margin: 60px 0 30px;
+        font-size: 60%;
     }
 
     #resume-section {
@@ -704,27 +761,25 @@ footer {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
     .title-hero, .main-hero, .end-hero {
         text-align: center;
     }
 
     .title-hero {
         margin-top: 60px;
+        font-size: 80%;
     }
 
     .end-hero {
-        max-width: 100%;
-        margin-bottom: 50px;
-    }
-
-    .hero-text-container {
-        margin: 60px 0 30px;
+        font-size: 70%;
+        max-width: 350px;
+        margin: 10px auto 50px;
     }
 }
 
 /* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
     .main-hero {
         font-size: 230%;
     }
@@ -752,7 +807,7 @@ footer {
 }
 
 /* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
     .main-hero {
         font-size: 240%;
     }
@@ -767,7 +822,7 @@ footer {
 }
 
 /* X-Large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1399.98px) {
     .main-hero {
         font-size: 295%;
     }
