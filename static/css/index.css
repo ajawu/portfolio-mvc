@@ -172,6 +172,12 @@ header {
     text-transform: uppercase;
 }
 
+.section-subtitle {
+    color: #5D216A;
+    font-weight: 600;
+    font-size: 120%;
+}
+
 .job-details-box {
     margin-top: 60px;
 }
@@ -722,9 +728,10 @@ footer {
 
 .resume-long {
     color: #000;
-    font-weight: 500;
-    font-size: 90%;
+    font-weight: 400;
+    font-size: 85%;
     max-width: 600px;
+    text-align: justify;
 }
 
 /* ----------------------------------------------- */
